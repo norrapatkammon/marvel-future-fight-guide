@@ -1,0 +1,94 @@
+{
+  "Meta": {
+    "title": "คู่มือ Marvel Future Fight",
+    "description": "ตัวละคร ประวัติแพตช์ และทีมแนะนำสำหรับ Marvel Future Fight"
+  },
+  "Nav": {
+    "home": "หน้าแรก",
+    "characters": "ตัวละคร",
+    "updates": "อัปเดต",
+    "teams": "ทีม",
+    "guides": "ไกด์"
+  },
+  "Home": {
+    "brand": "MFF Guide",
+    "headline": "เรียนรู้พื้นฐาน สร้างทีมให้แข็งแกร่ง",
+    "subhead": "คู่มือสองภาษาสำหรับ Marvel Future Fight — ตัวละคร ประวัติแพตช์ และทีมแนะนำ",
+    "ctaCharacters": "ดูตัวละคร",
+    "ctaUpdates": "ประวัติแพตช์",
+    "ctaTeams": "ดูทีม",
+    "ctaGuides": "อ่านไกด์"
+  },
+  "Characters": {
+    "title": "ตัวละคร",
+    "subtitle": "ค้นหาและกรองรายชื่อตัวละครทั้งหมด",
+    "search": "ค้นหาตัวละคร...",
+    "allRoles": "ทุกบทบาท",
+    "allTypes": "ทุกประเภท",
+    "allTiers": "ทุก tier",
+    "showing": "แสดง {count} จาก {total}",
+    "sortName": "เรียง: ชื่อ",
+    "sortTier": "เรียง: Tier",
+    "clearFilters": "ล้างตัวกรอง",
+    "empty": "ไม่พบตัวละครที่ตรงกับตัวกรอง",
+    "skills": "สกิล",
+    "back": "กลับไปรายชื่อตัวละคร",
+    "recommendedTeams": "ทีมที่แนะนำ"
+  },
+  "Updates": {
+    "title": "ประวัติอัปเดต",
+    "subtitle": "ดูประวัติแพตช์เกม พร้อมรายละเอียดตัวละครใหม่ ยูนิฟอร์ม และคอนเทนต์",
+    "search": "ค้นหาเวอร์ชันหรือชื่ออัปเดต...",
+    "allYears": "ทุกปี",
+    "allTags": "ทุกแท็ก",
+    "showing": "แสดง {count} อัปเดต",
+    "empty": "ไม่พบอัปเดตที่ตรงกับตัวกรอง",
+    "highlights": "ไฮไลต์แพตช์",
+    "relatedCharacters": "ตัวละครที่เกี่ยวข้อง",
+    "back": "กลับไปประวัติอัปเดต",
+    "bugle": "Daily Bugle",
+    "noMedia": "ยังไม่มีสื่อในแท็บนี้",
+    "media": {
+      "banners": "Banners",
+      "appIcon": "App Icon",
+      "keyArt": "Key Art"
+    }
+  },
+  "Teams": {
+    "title": "ทีม",
+    "subtitle": "ไอเดียทีมเริ่มต้นแยกตามโหมดเกม",
+    "mode": "โหมด",
+    "members": "สมาชิก",
+    "empty": "ไม่พบทีม",
+    "back": "กลับไปรายการทีม",
+    "why": "ทำไมถึงใช้ทีมนี้"
+  },
+  "Guides": {
+    "title": "ไกด์",
+    "subtitle": "ระบบพื้นฐานที่ผู้เล่นใหม่ควรรู้",
+    "items": {
+      "basics": {
+        "title": "พื้นฐานเกม",
+        "body": "เรียนรู้จังหวะการต่อสู้ พลังงาน และระบบการ์ดตัวละคร"
+      },
+      "gear": {
+        "title": "เกียร์และ ISO-8",
+        "body": "ทำความเข้าใจเกียร์แต่ละระดับ และเซ็ต ISO-8 ที่เสริมฮีโร่"
+      },
+      "uniforms": {
+        "title": "ยูนิฟอร์ม",
+        "body": "ยูนิฟอร์มเปลี่ยนสกิลและบทบาท — เลือกให้เข้ากับทีม"
+      },
+      "modes": {
+        "title": "โหมดเกม",
+        "body": "ภาพรวม Story, Timeline Battle, World Boss และ Alliance"
+      }
+    }
+  },
+  "Common": {
+    "role": "บทบาท",
+    "type": "ประเภท",
+    "tier": "Tier",
+    "gender": "เพศ"
+  }
+}

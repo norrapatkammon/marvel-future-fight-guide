@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b1220;
+  --foreground: #f1f5f9;
+  --panel: #121826;
+  --muted: #94a3b8;
+  --line: #243049;
+  --accent: #c026d3;
+  --accent-soft: #2a1840;
+  --hero-glow: #1e1b4b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-display);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(192, 38, 211, 0.12), transparent 32%),
+    linear-gradient(180deg, #0d1526 0%, var(--background) 40%, #080d18 100%);
+  color: var(--foreground);
+  font-family: var(--font-display), "Segoe UI", sans-serif;
+  min-height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+select,
+input,
+button {
+  color-scheme: dark;
+}

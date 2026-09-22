@@ -1,0 +1,94 @@
+{
+  "Meta": {
+    "title": "Marvel Future Fight Guide",
+    "description": "Characters, patch history, and team guides for Marvel Future Fight"
+  },
+  "Nav": {
+    "home": "Home",
+    "characters": "Characters",
+    "updates": "Updates",
+    "teams": "Teams",
+    "guides": "Guides"
+  },
+  "Home": {
+    "brand": "MFF Guide",
+    "headline": "Learn the basics. Build better teams.",
+    "subhead": "A bilingual guide for Marvel Future Fight — characters, patch history, and recommended teams.",
+    "ctaCharacters": "Browse characters",
+    "ctaUpdates": "Patch history",
+    "ctaTeams": "View teams",
+    "ctaGuides": "Read guides"
+  },
+  "Characters": {
+    "title": "Characters",
+    "subtitle": "Browse and filter the character roster.",
+    "search": "Search characters...",
+    "allRoles": "All roles",
+    "allTypes": "All types",
+    "allTiers": "All tiers",
+    "showing": "Showing {count} of {total}",
+    "sortName": "Sort: Name",
+    "sortTier": "Sort: Tier",
+    "clearFilters": "Clear filters",
+    "empty": "No characters match your filters.",
+    "skills": "Skills",
+    "back": "Back to characters",
+    "recommendedTeams": "Recommended teams"
+  },
+  "Updates": {
+    "title": "Update History",
+    "subtitle": "Browse game update history with details on new characters, uniforms, and content.",
+    "search": "Search version or title...",
+    "allYears": "All years",
+    "allTags": "All tags",
+    "showing": "Showing {count} updates",
+    "empty": "No updates match your filters.",
+    "highlights": "Patch highlights",
+    "relatedCharacters": "Related characters",
+    "back": "Back to updates",
+    "bugle": "Daily Bugle",
+    "noMedia": "No media in this tab.",
+    "media": {
+      "banners": "Banners",
+      "appIcon": "App Icon",
+      "keyArt": "Key Art"
+    }
+  },
+  "Teams": {
+    "title": "Teams",
+    "subtitle": "Starter team ideas by game mode.",
+    "mode": "Mode",
+    "members": "Members",
+    "empty": "No teams found.",
+    "back": "Back to teams",
+    "why": "Why this team"
+  },
+  "Guides": {
+    "title": "Guides",
+    "subtitle": "Core systems every new player should know.",
+    "items": {
+      "basics": {
+        "title": "Game basics",
+        "body": "Learn combat flow, energy, and how character cards work."
+      },
+      "gear": {
+        "title": "Gear & ISO-8",
+        "body": "Understand gear tiers and ISO-8 sets that boost your heroes."
+      },
+      "uniforms": {
+        "title": "Uniforms",
+        "body": "Uniforms change skills and roles — pick ones that fit your team."
+      },
+      "modes": {
+        "title": "Game modes",
+        "body": "Story, Timeline Battle, World Boss, and Alliance content overview."
+      }
+    }
+  },
+  "Common": {
+    "role": "Role",
+    "type": "Type",
+    "tier": "Tier",
+    "gender": "Gender"
+  }
+}
