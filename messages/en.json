@@ -7,15 +7,17 @@
     "home": "Home",
     "characters": "Characters",
     "updates": "Updates",
+    "ctps": "C.T.P.",
     "teams": "Teams",
     "guides": "Guides"
   },
   "Home": {
     "brand": "MFF Guide",
     "headline": "Learn the basics. Build better teams.",
-    "subhead": "A bilingual guide for Marvel Future Fight — characters, patch history, and recommended teams.",
+    "subhead": "A bilingual guide for Marvel Future Fight — characters, CTPs, patch history, and teams.",
     "ctaCharacters": "Browse characters",
     "ctaUpdates": "Patch history",
+    "ctaCtps": "View CTPs",
     "ctaTeams": "View teams",
     "ctaGuides": "Read guides"
   },
@@ -53,6 +55,31 @@
       "appIcon": "App Icon",
       "keyArt": "Key Art"
     }
+  },
+  "Ctps": {
+    "title": "C.T.P.",
+    "subtitle": "View all Celestial Tech Packs (CTPs) and their stats.",
+    "search": "Search CTPs...",
+    "searchFull": "Search by name, description, or acquisition...",
+    "allCategories": "All categories",
+    "allFocus": "All focus",
+    "showing": "{count} of {total} C.T.P.s",
+    "empty": "No CTPs match your filters.",
+    "maxStats": "Maximum stats",
+    "statsMax": "Maximum rollable stats",
+    "proc": "Proc effect",
+    "cooldown": "Cooldown",
+    "tips": "Tips",
+    "recommended": "Recommended characters",
+    "back": "Back to CTPs",
+    "reforged": "Reforged",
+    "reforgeStats": "Reforge stats",
+    "reforgeHint": "Reforge stats are only available for Mighty and Brilliant tiers. Switch to a reforged tier above to see them.",
+    "acquisition": "Acquisition",
+    "maxRollValues": "Max roll values",
+    "reforgeMaxValues": "Reforge max values",
+    "special": "Special",
+    "generic": "Generic"
   },
   "Teams": {
     "title": "Teams",

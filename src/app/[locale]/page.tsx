@@ -34,6 +34,12 @@ export default async function HomePage({ params }: Props) {
             {t("ctaUpdates")}
           </Link>
           <Link
+            href="/ctps"
+            className="rounded-md border border-[var(--line)] bg-[var(--panel)] px-4 py-2.5 text-sm font-semibold transition hover:border-[var(--accent)]"
+          >
+            {t("ctaCtps")}
+          </Link>
+          <Link
             href="/teams"
             className="rounded-md border border-[var(--line)] bg-[var(--panel)] px-4 py-2.5 text-sm font-semibold transition hover:border-[var(--accent)]"
           >

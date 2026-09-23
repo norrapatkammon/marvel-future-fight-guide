@@ -7,15 +7,17 @@
     "home": "หน้าแรก",
     "characters": "ตัวละคร",
     "updates": "อัปเดต",
+    "ctps": "C.T.P.",
     "teams": "ทีม",
     "guides": "ไกด์"
   },
   "Home": {
     "brand": "MFF Guide",
     "headline": "เรียนรู้พื้นฐาน สร้างทีมให้แข็งแกร่ง",
-    "subhead": "คู่มือสองภาษาสำหรับ Marvel Future Fight — ตัวละคร ประวัติแพตช์ และทีมแนะนำ",
+    "subhead": "คู่มือสองภาษาสำหรับ Marvel Future Fight — ตัวละคร, CTP, ประวัติแพตช์ และทีม",
     "ctaCharacters": "ดูตัวละคร",
     "ctaUpdates": "ประวัติแพตช์",
+    "ctaCtps": "ดู CTP",
     "ctaTeams": "ดูทีม",
     "ctaGuides": "อ่านไกด์"
   },
@@ -53,6 +55,31 @@
       "appIcon": "App Icon",
       "keyArt": "Key Art"
     }
+  },
+  "Ctps": {
+    "title": "C.T.P.",
+    "subtitle": "ดู Celestial Tech Packs (CTP) ทั้งหมดพร้อมสถิติ",
+    "search": "ค้นหา CTP...",
+    "searchFull": "ค้นหาจากชื่อ คำอธิบาย หรือแหล่งที่มา...",
+    "allCategories": "ทุกประเภท",
+    "allFocus": "ทุกโฟกัส",
+    "showing": "{count} จาก {total} C.T.P.",
+    "empty": "ไม่พบ CTP ที่ตรงกับตัวกรอง",
+    "maxStats": "สถิติสูงสุด",
+    "statsMax": "ค่าสถานะสูงสุดที่สุ่มได้",
+    "proc": "เอฟเฟกต์ Proc",
+    "cooldown": "คูลดาวน์",
+    "tips": "เคล็ดลับ",
+    "recommended": "ตัวละครที่แนะนำ",
+    "back": "กลับไปรายการ CTP",
+    "reforged": "Reforged",
+    "reforgeStats": "สถิติ Reforge",
+    "reforgeHint": "สถิติ Reforge มีเฉพาะระดับ Mighty และ Brilliant สลับแท็บด้านบนเพื่อดู",
+    "acquisition": "แหล่งที่มา",
+    "maxRollValues": "ค่าม้วนสูงสุด",
+    "reforgeMaxValues": "ค่า Reforge สูงสุด",
+    "special": "Special",
+    "generic": "Generic"
   },
   "Teams": {
     "title": "ทีม",

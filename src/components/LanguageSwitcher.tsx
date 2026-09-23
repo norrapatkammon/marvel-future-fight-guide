@@ -10,7 +10,9 @@ export function LanguageSwitcher() {
   const router = useRouter();
 
   function switchLocale(nextLocale: Locale) {
-    router.replace(pathname, { locale: nextLocale });
+    const qs =
+      typeof window !== "undefined" ? window.location.search : "";
+    router.replace(`${pathname}${qs}`, { locale: nextLocale });
   }
 
   return (

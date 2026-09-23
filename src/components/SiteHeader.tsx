@@ -11,6 +11,7 @@ export function SiteHeader() {
   const links = [
     { href: "/characters", label: t("characters") },
     { href: "/updates", label: t("updates") },
+    { href: "/ctps", label: t("ctps") },
     { href: "/teams", label: t("teams") },
     { href: "/guides", label: t("guides") },
   ] as const;
