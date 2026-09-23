@@ -37,3 +37,28 @@ input,
 button {
   color-scheme: dark;
 }
+
+/* Horizontal CTP icon strip — clearer scrollbar + touch-friendly pan */
+.ctp-strip {
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #475569 transparent;
+}
+
+.ctp-strip::-webkit-scrollbar {
+  height: 8px;
+}
+
+.ctp-strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ctp-strip::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 999px;
+}
+
+.ctp-strip::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}

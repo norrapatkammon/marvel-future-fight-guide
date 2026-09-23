@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Suspense, useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
@@ -205,6 +205,7 @@ function CtpExplorerInner({ initialId }: { initialId?: string }) {
   const [tier, setTier] = useState<CtpTier>(
     isCtpTier(tierFromUrl) ? tierFromUrl : "regular",
   );
+  const stripRef = useRef<HTMLDivElement>(null);
 
   // Keep selection when locale changes (URL remounts the page).
   useEffect(() => {
@@ -246,6 +247,43 @@ function CtpExplorerInner({ initialId }: { initialId?: string }) {
       );
     });
   }, [locale, query]);
+
+  // Vertical mouse wheel → horizontal scroll on the CTP strip.
+  useEffect(() => {
+    const el = stripRef.current;
+    if (!el) return;
+
+    function onWheel(event: WheelEvent) {
+      if (!el) return;
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+      if (el.scrollWidth <= el.clientWidth) return;
+      event.preventDefault();
+      el.scrollLeft += event.deltaY;
+    }
+
+    el.addEventListener("wheel", onWheel, { passive: false });
+    return () => el.removeEventListener("wheel", onWheel);
+  }, [filtered.length]);
+
+  useEffect(() => {
+    const el = stripRef.current;
+    if (!el || !selectedId) return;
+    const active = el.querySelector<HTMLElement>(`[data-ctp-id="${selectedId}"]`);
+    active?.scrollIntoView({
+      behavior: "smooth",
+      inline: "nearest",
+      block: "nearest",
+    });
+  }, [selectedId, filtered.length]);
+
+  function scrollStrip(direction: -1 | 1) {
+    const el = stripRef.current;
+    if (!el) return;
+    el.scrollBy({
+      left: direction * Math.max(el.clientWidth * 0.7, 160),
+      behavior: "smooth",
+    });
+  }
 
   useEffect(() => {
     if (!filtered.some((ctp) => ctp.id === selectedId) && filtered[0]) {
@@ -302,31 +340,57 @@ function CtpExplorerInner({ initialId }: { initialId?: string }) {
         <p className="text-[#94a3b8]">{t("empty")}</p>
       ) : (
         <>
-          <div className="flex gap-2 overflow-x-auto pb-1">
-            {filtered.map((ctp) => {
-              const active = ctp.id === selected?.id;
-              return (
-                <button
-                  key={ctp.id}
-                  type="button"
-                  onClick={() => selectCtp(ctp.id)}
-                  className={`shrink-0 rounded-xl border p-2 transition ${
-                    active
-                      ? "border-[#c026d3] bg-[#2a1840] shadow-[0_0_0_1px_#c026d3]"
-                      : "border-[#243049] bg-[#121826] hover:border-[#475569]"
-                  }`}
-                  title={tText(ctp.name, locale)}
-                >
-                  <Image
-                    src={getCtpImage(ctp.id)}
-                    alt={tText(ctp.name, locale)}
-                    width={56}
-                    height={56}
-                    className="h-14 w-14 object-contain"
-                  />
-                </button>
-              );
-            })}
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              aria-label="Scroll left"
+              onClick={() => scrollStrip(-1)}
+              className="hidden h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#243049] bg-[#121826] text-white hover:border-[#c026d3] hover:text-[#e879f9] sm:flex"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
+                <path d="M15 6l-6 6 6 6" />
+              </svg>
+            </button>
+            <div
+              ref={stripRef}
+              className="ctp-strip min-w-0 flex-1 flex gap-2 overflow-x-auto scroll-smooth pb-2"
+            >
+              {filtered.map((ctp) => {
+                const active = ctp.id === selected?.id;
+                return (
+                  <button
+                    key={ctp.id}
+                    type="button"
+                    data-ctp-id={ctp.id}
+                    onClick={() => selectCtp(ctp.id)}
+                    className={`shrink-0 rounded-xl border p-2 transition ${
+                      active
+                        ? "border-[#c026d3] bg-[#2a1840] shadow-[0_0_0_1px_#c026d3]"
+                        : "border-[#243049] bg-[#121826] hover:border-[#475569]"
+                    }`}
+                    title={tText(ctp.name, locale)}
+                  >
+                    <Image
+                      src={getCtpImage(ctp.id)}
+                      alt={tText(ctp.name, locale)}
+                      width={56}
+                      height={56}
+                      className="h-14 w-14 object-contain"
+                    />
+                  </button>
+                );
+              })}
+            </div>
+            <button
+              type="button"
+              aria-label="Scroll right"
+              onClick={() => scrollStrip(1)}
+              className="hidden h-9 w-9 shrink-0 items-center justify-center rounded-full border border-[#243049] bg-[#121826] text-white hover:border-[#c026d3] hover:text-[#e879f9] sm:flex"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
+                <path d="M9 6l6 6-6 6" />
+              </svg>
+            </button>
           </div>
 
           {selected && (
