@@ -147,19 +147,29 @@ function DetailCard({
             <p className="text-sm italic text-[#64748b]">{t("reforgeHint")}</p>
           ) : (
             <div className="space-y-4 text-sm">
-              <div>
-                <p className="mb-1 font-semibold text-[#86efac]">
-                  {t("special")}
-                  {tierData.reforge.specialName
-                    ? `: ${tText(tierData.reforge.specialName, locale)}`
-                    : ""}
-                </p>
-                <StatLines lines={tierData.reforge.specialLines} locale={locale} />
-              </div>
-              <div>
-                <p className="mb-1 font-semibold text-[#93c5fd]">{t("generic")}</p>
-                <StatLines lines={tierData.reforge.genericLines} locale={locale} />
-              </div>
+              {tierData.reforge.specialLines.length > 0 && (
+                <div>
+                  {tierData.reforge.specialName && (
+                    <p className="mb-1 font-semibold text-[#86efac]">
+                      {t("special")}:{" "}
+                      {tText(tierData.reforge.specialName, locale)}
+                    </p>
+                  )}
+                  <StatLines
+                    lines={tierData.reforge.specialLines}
+                    locale={locale}
+                  />
+                </div>
+              )}
+              {tierData.reforge.genericLines.length > 0 && (
+                <div>
+                  <p className="mb-1 font-semibold text-[#93c5fd]">{t("generic")}</p>
+                  <StatLines
+                    lines={tierData.reforge.genericLines}
+                    locale={locale}
+                  />
+                </div>
+              )}
             </div>
           )}
         </section>
